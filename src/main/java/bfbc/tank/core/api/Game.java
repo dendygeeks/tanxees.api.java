@@ -1,6 +1,6 @@
 package bfbc.tank.core.api;
 
-import java.util.HashMap;
+import java.util.Map;
 
 public interface Game {
 	public double getCellSize();
@@ -8,7 +8,7 @@ public interface Game {
 	public int getFieldHeight();
 	public boolean isOver();
 	
-	public HashMap<String, Player> getPlayers();
+	public Map<String, Player> getPlayers();
 	public Flag getFlag();
 	public Cell[] getField();
 }

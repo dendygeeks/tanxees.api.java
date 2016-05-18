@@ -3,32 +3,6 @@ package bfbc.tank.core.api;
 import java.util.List;
 
 public interface Player {
-	enum Appearance {
-
-		GREEN("green"), YELLOW("yellow"), GRAY("gray");
-
-
-
-		public final String id;
-
-		Appearance(String id) {
-			this.id = id;
-		}
-	}
-	
-	enum UnitType {
-
-		SMALL("small", 20/*22*/, 27), MEDIUM("medium", 34, 34);
-
-		public final String id;
-		public final double sizeW, sizeL;
-
-		UnitType(String id, double sizeW, double sizeL) {
-			this.id = id;
-			this.sizeW = sizeW;
-			this.sizeL = sizeL;
-		}
-	}
 	
 	public UnitType getUnitType();
 	public PlayerUnit getUnit();
@@ -37,4 +11,5 @@ public interface Player {
 	public DebugData getDebugData();
 	public List<Missile> getMissiles();
 
+	public boolean ownsMissile(Missile m);
 }

@@ -1,4 +1,4 @@
-package bfbc.tank.core.api;
+package bfbc.tank.api.interfaces;
 
 public interface Missile extends Unit {
 

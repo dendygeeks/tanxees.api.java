@@ -1,4 +1,4 @@
-package bfbc.tank.core.api;
+package bfbc.tank.api.interfaces;
 public enum UnitType {
 
 	SMALL("small", 20/*22*/, 27), MEDIUM("medium", 34, 34);

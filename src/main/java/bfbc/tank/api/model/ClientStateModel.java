@@ -11,11 +11,11 @@ import bfbc.tank.utils.GlobalServices;
 
 public class ClientStateModel<DD extends DebugData> {
 	@Expose
-	private final PlayerKeysModel keys;
+	private PlayerKeysModel keys;
 	
 	@Expose
-	private final DD debugData;
-
+	private DD debugData;
+	
 	public ClientStateModel(PlayerKeysModel keys, DD debug) {
 		this.keys = keys;
 		this.debugData = debug;
@@ -29,6 +29,14 @@ public class ClientStateModel<DD extends DebugData> {
 		return debugData;
 	}
 	
+	public void setKeys(PlayerKeysModel keys) {
+		this.keys = keys;
+	}
+
+	public void setDebugData(DD debugData) {
+		this.debugData = debugData;
+	}
+
 	public static <DD extends DebugData> ClientStateModel<DD> fromJson(Class<DD> debugDataClass, String json) {
 		Type parameterizedClientStateModelType = new ParameterizedType() {
 		    public Type getRawType() {

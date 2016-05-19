@@ -2,14 +2,14 @@ package bfbc.tank.api.interfaces;
 
 import java.util.List;
 
-public interface Player {
+public interface Player<TPU extends PlayerUnit, TDD extends DebugData, TM extends Missile> {
 	
 	public UnitType getUnitType();
-	public PlayerUnit getUnit();
+	public TPU getUnit();
 	public Appearance getAppearance();
 	public int getFrags();
-	public DebugData getDebugData();
-	public List<Missile> getMissiles();
+	public TDD getDebugData();
+	public List<TM> getMissiles();
 
-	public boolean ownsMissile(Missile m);
+	public boolean ownsMissile(TM m);
 }

@@ -6,14 +6,15 @@ import java.util.Map.Entry;
 
 import com.google.gson.annotations.Expose;
 
-import bfbc.tank.api.interfaces.Cell;
-import bfbc.tank.api.interfaces.Flag;
 import bfbc.tank.api.interfaces.Game;
-import bfbc.tank.api.interfaces.GlobalServices;
-import bfbc.tank.api.interfaces.Missile;
-import bfbc.tank.api.interfaces.Player;
+import bfbc.tank.utils.GlobalServices;
 
-public class GameModel implements Game {
+public class GameModel implements Game<PlayerUnitModel, 
+                                       DebugDataModel,
+                                       MissileModel, 
+                                       CellModel, 
+                                       FlagModel, 
+                                       PlayerModel> {
 		
 	@Expose
 	private final int fieldWidth;// = 28 * 2;
@@ -26,7 +27,7 @@ public class GameModel implements Game {
 	private boolean isOver = false;
 	
 	@Expose
-	private volatile HashMap<String, Player> players = new HashMap<>();
+	private volatile HashMap<String, PlayerModel> players = new HashMap<>();
 	@Expose
 	private volatile FlagModel flag;
 	
@@ -68,36 +69,36 @@ public class GameModel implements Game {
 	}
 
 	@Override
-	public Map<String, Player> getPlayers() {
+	public Map<String, PlayerModel> getPlayers() {
 		return players;
 	}
 	
 	@Override
-	public Flag getFlag() {
+	public FlagModel getFlag() {
 		return flag;
 	}
 
 	@Override
-	public Cell[] getField() {
+	public CellModel[] getField() {
 		return field;
 	}
 	
 	public String findPlayerId(PlayerModel player) {
-		for (Entry<String, Player> e : players.entrySet()) {
+		for (Entry<String, PlayerModel> e : players.entrySet()) {
 			if (e.getValue() == player) return e.getKey();
 		}
 		return null;
 	}
 
 	public String findPlayerIdByTank(PlayerUnitModel tank) {
-		for (Entry<String, Player> e : players.entrySet()) {
+		for (Entry<String, PlayerModel> e : players.entrySet()) {
 			if (e.getValue().getUnit() == tank) return e.getKey();
 		}
 		return null;
 	}
 	
-	public Player findMissileOwner(Missile missile) {
-		for (Player p : players.values()) {
+	public PlayerModel findMissileOwner(MissileModel missile) {
+		for (PlayerModel p : players.values()) {
 			if (p.ownsMissile(missile)) return p;
 		}
 		return null;

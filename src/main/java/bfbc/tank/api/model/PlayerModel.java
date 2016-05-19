@@ -6,13 +6,10 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 
 import bfbc.tank.api.interfaces.Appearance;
-import bfbc.tank.api.interfaces.DebugData;
-import bfbc.tank.api.interfaces.Missile;
 import bfbc.tank.api.interfaces.Player;
-import bfbc.tank.api.interfaces.PlayerUnit;
 import bfbc.tank.api.interfaces.UnitType;
 
-public class PlayerModel implements Player {
+public class PlayerModel implements Player<PlayerUnitModel, DebugDataModel, MissileModel> {
 	
 	@Expose
 	private PlayerUnitModel unit;
@@ -30,7 +27,7 @@ public class PlayerModel implements Player {
 	private DebugDataModel debugData;
 
 	@Expose
-	private List<Missile> missiles = new ArrayList<>();
+	private List<MissileModel> missiles = new ArrayList<>();
 
 	public PlayerModel(UnitType unitType, Appearance appearance, int frags) {
 		this.unitType = unitType;
@@ -44,7 +41,7 @@ public class PlayerModel implements Player {
 	}
 
 	@Override
-	public PlayerUnit getUnit() {
+	public PlayerUnitModel getUnit() {
 		return unit;
 	}
 
@@ -59,17 +56,17 @@ public class PlayerModel implements Player {
 	}
 
 	@Override
-	public DebugData getDebugData() {
+	public DebugDataModel getDebugData() {
 		return debugData;
 	}
 
 	@Override
-	public List<Missile> getMissiles() {
+	public List<MissileModel> getMissiles() {
 		return missiles;
 	}
 
 	@Override
-	public boolean ownsMissile(Missile m) {
+	public boolean ownsMissile(MissileModel m) {
 		return missiles.contains(m);
 	}
 	

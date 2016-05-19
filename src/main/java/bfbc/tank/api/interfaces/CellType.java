@@ -13,6 +13,13 @@ public enum CellType {
 		this.code = code;
 	}
 	
+	public static CellType fromCode(String code) {
+		for (CellType val : values()) {
+			if (val.code.equals(code)) return val;
+		}
+		return null;
+	}
+	
 	/**
 	 * @return <code>true</code> if this cell type is impassable unless destroyed 
 	 */

@@ -6,6 +6,13 @@ public enum UnitType {
 	public final String id;
 	public final double sizeW, sizeL;
 
+	public static UnitType fromId(String id) {
+		for (UnitType val : values()) {
+			if (val.id == id) return val;
+		}
+		return null;
+	}
+	
 	UnitType(String id, double sizeW, double sizeL) {
 		this.id = id;
 		this.sizeW = sizeW;

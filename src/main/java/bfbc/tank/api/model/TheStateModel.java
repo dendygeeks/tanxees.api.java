@@ -2,7 +2,7 @@ package bfbc.tank.api.model;
 
 import com.google.gson.annotations.Expose;
 
-import bfbc.tank.api.interfaces.GlobalServices;
+import bfbc.tank.utils.GlobalServices;
 
 public class TheStateModel {
 	@Expose
@@ -17,5 +17,13 @@ public class TheStateModel {
 	
 	public synchronized String toJson() {
 		return GlobalServices.getGson().toJson(this);
+	}
+	
+	public static TheStateModel fromJson(String json) {
+		return GlobalServices.getGson().fromJson(json, TheStateModel.class);
+	}
+	
+	public GameModel getGameModel() {
+		return game;
 	}
 }

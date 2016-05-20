@@ -1,13 +1,13 @@
-package bfbc.tank.api.model;
+package dendygeeks.tanxees.api.java.model;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
 import com.google.gson.annotations.Expose;
 
-import bfbc.tank.api.interfaces.DebugData;
-import bfbc.tank.api.model.PlayerKeysModel;
-import bfbc.tank.utils.GlobalServices;
+import dendygeeks.tanxees.api.java.interfaces.DebugData;
+import dendygeeks.tanxees.api.java.model.PlayerKeysModel;
+import dendygeeks.tanxees.utils.GlobalServices;
 
 public class ClientStateModel<DD extends DebugData> {
 	@Expose

@@ -1,4 +1,4 @@
-package bfbc.tank.api.model;
+package dendygeeks.tanxees.api.java.model;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,8 +6,8 @@ import java.util.Map.Entry;
 
 import com.google.gson.annotations.Expose;
 
-import bfbc.tank.api.interfaces.Game;
-import bfbc.tank.utils.GlobalServices;
+import dendygeeks.tanxees.api.java.interfaces.Game;
+import dendygeeks.tanxees.utils.GlobalServices;
 
 public class GameModel implements Game<PlayerUnitModel, 
                                        DebugDataModel,

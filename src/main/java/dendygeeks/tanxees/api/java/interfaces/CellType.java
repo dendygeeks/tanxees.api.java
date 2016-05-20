@@ -1,4 +1,4 @@
-package bfbc.tank.api.interfaces;
+package dendygeeks.tanxees.api.java.interfaces;
 
 public enum CellType {
 	EMPTY("E"), 

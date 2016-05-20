@@ -1,4 +1,4 @@
-package bfbc.tank.api.interfaces;
+package dendygeeks.tanxees.api.java.interfaces;
 public enum UnitType {
 
 	SMALL("small", 20/*22*/, 27), MEDIUM("medium", 34, 34);

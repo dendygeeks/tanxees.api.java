@@ -1,4 +1,4 @@
-package bfbc.tank.api.interfaces;
+package dendygeeks.tanxees.api.java.interfaces;
 
 public class PointIJ {
 	public final int i, j;

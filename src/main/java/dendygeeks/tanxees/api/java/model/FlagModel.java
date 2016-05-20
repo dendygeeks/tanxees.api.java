@@ -1,8 +1,8 @@
-package bfbc.tank.api.model;
+package dendygeeks.tanxees.api.java.model;
 
 import com.google.gson.annotations.Expose;
 
-import bfbc.tank.api.interfaces.Flag;
+import dendygeeks.tanxees.api.java.interfaces.Flag;
 
 public class FlagModel extends UnitModel implements Flag {
 

@@ -1,9 +1,9 @@
-package bfbc.tank.api.model;
+package dendygeeks.tanxees.api.java.model;
 
 import com.google.gson.annotations.Expose;
 
-import bfbc.tank.api.interfaces.Cell;
-import bfbc.tank.api.interfaces.CellType;
+import dendygeeks.tanxees.api.java.interfaces.Cell;
+import dendygeeks.tanxees.api.java.interfaces.CellType;
 
 public class CellModel implements Cell {
 	

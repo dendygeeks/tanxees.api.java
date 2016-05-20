@@ -1,6 +1,6 @@
-package bfbc.tank.api.model;
+package dendygeeks.tanxees.api.java.model;
 
-import bfbc.tank.api.interfaces.Missile;
+import dendygeeks.tanxees.api.java.interfaces.Missile;
 
 public class MissileModel extends UnitModel implements Missile {
 	

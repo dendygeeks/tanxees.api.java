@@ -1,13 +1,13 @@
-package bfbc.tank.api.model;
+package dendygeeks.tanxees.api.java.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.annotations.Expose;
 
-import bfbc.tank.api.interfaces.Appearance;
-import bfbc.tank.api.interfaces.Player;
-import bfbc.tank.api.interfaces.UnitType;
+import dendygeeks.tanxees.api.java.interfaces.Appearance;
+import dendygeeks.tanxees.api.java.interfaces.Player;
+import dendygeeks.tanxees.api.java.interfaces.UnitType;
 
 public class PlayerModel implements Player<PlayerUnitModel, DebugDataModel, MissileModel> {
 	

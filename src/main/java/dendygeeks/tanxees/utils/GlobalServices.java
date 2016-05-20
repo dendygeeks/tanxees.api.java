@@ -1,4 +1,4 @@
-package bfbc.tank.utils;
+package dendygeeks.tanxees.utils;
 
 import java.io.IOException;
 
@@ -8,10 +8,10 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
 
-import bfbc.tank.api.interfaces.Appearance;
-import bfbc.tank.api.interfaces.CellType;
-import bfbc.tank.api.interfaces.UnitType;
-import bfbc.tank.api.model.CellModel;
+import dendygeeks.tanxees.api.java.interfaces.Appearance;
+import dendygeeks.tanxees.api.java.interfaces.CellType;
+import dendygeeks.tanxees.api.java.interfaces.UnitType;
+import dendygeeks.tanxees.api.java.model.CellModel;
 
 public class GlobalServices {
 	private static Gson gson;

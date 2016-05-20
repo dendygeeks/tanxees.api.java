@@ -1,8 +1,8 @@
-package bfbc.tank.api.model;
+package dendygeeks.tanxees.api.java.model;
 
 import com.google.gson.annotations.Expose;
 
-import bfbc.tank.utils.GlobalServices;
+import dendygeeks.tanxees.utils.GlobalServices;
 
 public class TheStateModel {
 	@Expose

@@ -1,8 +1,8 @@
-package bfbc.tank.api.model;
+package dendygeeks.tanxees.api.java.model;
 
 import com.google.gson.annotations.Expose;
 
-import bfbc.tank.api.interfaces.DebugData;
+import dendygeeks.tanxees.api.java.interfaces.DebugData;
 
 public class DebugDataModel implements DebugData {
 

@@ -10,6 +10,9 @@ public class CellModel implements Cell {
 	@Expose
 	private CellType type;
 	
+	@Expose
+	private Long touched;
+	
 	public CellModel(CellType type) {
 		this.type = type;
 	}
@@ -23,4 +26,11 @@ public class CellModel implements Cell {
 		return type;
 	}
 
+	public void setMovementTouchMoment(long touched) {
+		this.touched = touched;
+	}
+	
+	public long getMovementTouchMoment() {
+		return touched;
+	}
 }

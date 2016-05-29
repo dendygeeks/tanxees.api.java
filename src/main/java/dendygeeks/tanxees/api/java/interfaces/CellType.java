@@ -1,9 +1,10 @@
 package dendygeeks.tanxees.api.java.interfaces;
 
 public enum CellType {
-	EMPTY("E"), 
-	CONCRETE("C"), 
-	BRICKS("B"), 
+	EMPTY("E"),
+	CONCRETE("C"),
+	BRICKS("B"),
+	TREE("T"),
 	DARK_CONCRETE("DC"),
 	DARK_BRICKS("DB");
 	

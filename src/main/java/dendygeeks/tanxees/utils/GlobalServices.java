@@ -21,7 +21,7 @@ public class GlobalServices {
     	builder.excludeFieldsWithoutExposeAnnotation();
     	//builder.setPrettyPrinting();
     	
-    	builder.registerTypeAdapter(CellModel.class, new CellTypeAdapter());
+    	builder.registerTypeAdapter(CellType.class, new CellTypeAdapter());
     	builder.registerTypeAdapter(Appearance.class, new AppearanceTypeAdapter());
     	builder.registerTypeAdapter(UnitType.class, new UnitTypeTypeAdapter());
     	
@@ -68,23 +68,23 @@ public class GlobalServices {
 		}
 	}
 	
-	static class CellTypeAdapter extends com.google.gson.TypeAdapter<CellModel> {
-		public CellModel read(JsonReader reader) throws IOException {
+	static class CellTypeAdapter extends com.google.gson.TypeAdapter<CellType> {
+		public CellType read(JsonReader reader) throws IOException {
 			// TODO It can't read
 			if (reader.peek() == JsonToken.NULL) {
 				reader.nextNull();
 				return null;
 			}
 			String code = reader.nextString();
-			return new CellModel(CellType.fromCode(code));
+			return CellType.fromCode(code);
 		}
 
-		public void write(JsonWriter writer, CellModel value) throws IOException {
+		public void write(JsonWriter writer, CellType value) throws IOException {
 			if (value == null) {
 				writer.nullValue();
 				return;
 			}
-			String name = value.getType().code;
+			String name = value.code;
 			writer.value(name);
 		}
 	}

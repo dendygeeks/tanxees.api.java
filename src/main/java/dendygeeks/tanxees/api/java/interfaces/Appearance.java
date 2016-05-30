@@ -11,7 +11,7 @@ public enum Appearance {
 	
 	public static Appearance fromId(String id) {
 		for (Appearance val : values()) {
-			if (val.id == id) return val;
+			if (val.id.equals(id)) return val;
 		}
 		return null;
 	}

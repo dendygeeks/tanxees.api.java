@@ -8,7 +8,7 @@ public enum UnitType {
 
 	public static UnitType fromId(String id) {
 		for (UnitType val : values()) {
-			if (val.id == id) return val;
+			if (val.id.equals(id)) return val;
 		}
 		return null;
 	}

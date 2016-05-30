@@ -9,4 +9,9 @@ public enum Direction {
 		this.angle = angle;
 	}
 	
+	public static DeltaAngle sub(Direction d1, Direction d2) {
+		int a = (d1.angle - d2.angle + 360) % 360;
+		return DeltaAngle.fromAngle(a);
+	}
+
 }

@@ -6,7 +6,8 @@ public enum CellType {
 	BRICKS("B"),
 	TREE("T"),
 	DARK_CONCRETE("DC"),
-	DARK_BRICKS("DB");
+	DARK_BRICKS("DB"),
+	WATER("W");
 	
 	public final String code;
 	

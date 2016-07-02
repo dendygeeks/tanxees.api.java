@@ -1,7 +1,7 @@
 package dendygeeks.tanxees.api.java.interfaces;
 
 public enum CellType {
-	EMPTY("E", 1.0, 0.3), //10.0, 30.0),
+	EMPTY("E", 12.0, 30.0),
 	CONCRETE("C", 0.0, 0.0),
 	BRICKS("B", 0.0, 0.0),
 	TREE("T", 2.0, 1.0),

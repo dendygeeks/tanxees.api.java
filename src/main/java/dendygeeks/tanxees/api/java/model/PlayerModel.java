@@ -10,7 +10,7 @@ import dendygeeks.tanxees.api.java.interfaces.Player;
 import dendygeeks.tanxees.api.java.interfaces.UnitType;
 
 public class PlayerModel implements Player<PlayerUnitModel, DebugDataModel, MissileModel> {
-	
+		
 	@Expose
 	private PlayerUnitModel unit;
 
@@ -49,7 +49,7 @@ public class PlayerModel implements Player<PlayerUnitModel, DebugDataModel, Miss
 	public Appearance getAppearance() {
 		return appearance;
 	}
-
+	
 	@Override
 	public int getFrags() {
 		return frags;
